@@ -20,7 +20,7 @@ class CreateTraitCommand extends Command
 
     protected $signature = 'make:trait {name}';
 
-    protected $description = 'Generates a Trait in the App\\Traits folder, folder is created if it doesn\'t exist';
+    protected $description = 'Create a new trait class';
 
     public function __construct()
     {
@@ -30,7 +30,7 @@ class CreateTraitCommand extends Command
     protected function getArguments()
     {
         return [
-            ['trait', InputArgument::REQUIRED, 'The name of the trait']
+            ['name', InputArgument::REQUIRED, 'The name of the trait']
         ];
     }
 
@@ -41,7 +41,7 @@ class CreateTraitCommand extends Command
      */
     private function getTraitName(): string
     {
-        return Str::studly($this->argument('trait'));
+        return Str::studly($this->argument('name'));
     }
 
     /**
