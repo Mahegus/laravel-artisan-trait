@@ -1,0 +1,30 @@
+{
+    "name": "matt127127/laravel-artisan-trait",
+    "description": "Adds the artisan command make:trait",
+    "type": "library",
+    "require": {
+        "php": "^7.4|^8",
+        "illuminate/support": "^8.61",
+        "illuminate/console": "^8.61",
+        "illuminate/filesystem": "^8.61"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matthew Treagus",
+            "email": "matt@treagus.me"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "matt127127\\TraitCommand\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "matt127127\\TraitCommand\\TraitCommandServiceProvider"
+            ]
+        }
+    }
+}
